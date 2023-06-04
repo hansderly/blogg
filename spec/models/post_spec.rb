@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 class PostTest < ActiveSupport::TestCase
-   describe Post, type: :model do
+  describe Post, type: :model do
     author = User.new(name: 'user1')
 
     describe 'Title' do
