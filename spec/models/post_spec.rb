@@ -5,17 +5,17 @@ class PostTest < ActiveSupport::TestCase
     author = User.new(name: 'user1')
 
     describe 'Title' do
-      it 'invalid if' do
+      it 'fail if e,pty' do
         post = Post.new(title: nil, comments_counter: 1, likes_counter: 1, author:)
         expect(post).to_not be_valid
       end
 
-      it 'valid if not blank' do
+      it 'succes if not empty' do
         post = Post.new(title: 'test', comments_counter: 1, likes_counter: 1, author:)
         expect(post).to be_valid
       end
 
-      it 'not valid if exceeds 250 characters' do
+      it 'cant be greater than number of letter' do
         post = Post.new(title: 'a' * 251, comments_counter: 1, likes_counter: 1, author:)
         expect(post).to_not be_valid
       end
