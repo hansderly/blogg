@@ -1,1 +1,22 @@
-<p>you are seeing index in users</p>
+<section class="wrapper">
+  <section class="users-wrapper">
+    <h1>List of users</h1>
+    <% @users.each do |user| %>
+
+    <div class="users">
+      <div class="user-img">
+        <%= image_tag user.photo %>
+      </div>
+      <div class="user-infos">
+        <p class="u-name"> <%= user.name %> </p>
+        <div class="u-counter-wrapper">
+          Number of posts: <div class="tag">
+          <p class="u-counter"> <%= user.posts_counter %> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </section>
+</section>
+
