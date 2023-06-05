@@ -56,6 +56,7 @@ group :development, :test do
   gem 'rubocop', '>= 1.0', '< 2.0'
 
   # rspec-rails
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
   gem 'rspec-rails', '~> 6.0.0'
 end
 
