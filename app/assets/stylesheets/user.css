@@ -42,3 +42,29 @@
   border-radius: 15px;
   background-color: aliceblue;
 }
+
+.u-bio {
+  margin: 25px 0;
+}
+
+.u-bio h1 {
+  margin: 10px 0;
+}
+
+.u-bio-text-wrapper {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.btn-all-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.btn-all-wrapper button {
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid wheat;
+}

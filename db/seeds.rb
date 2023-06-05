@@ -11,7 +11,7 @@ Post.destroy_all
 Comment.destroy_all
 Like.destroy_all
 
-3.times { user = User.create!(name: Faker::Name.first_name, photo: Faker::Avatar.image, bio: Faker::Job.title) }
+3.times { user = User.create!(name: Faker::Name.first_name, photo: Faker::Avatar.image, bio: Faker::Quote.matz) }
 
 User.all.each do |user|
   5.times do
