@@ -1,0 +1,27 @@
+.btn-like-wrapper {
+  display: flex;
+  margin-top: 15px;
+}
+
+.btn-like {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid wheat;
+}
+
+.add-comment-wrapper {
+  display: flex;
+  margin: 15px 0;
+}
+
+.c-input {
+  border: 1px solid wheat;
+  height: 100px;
+  width: 300px;
+}
+
+.btn-comment {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid wheat;
+}
