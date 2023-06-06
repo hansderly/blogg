@@ -57,6 +57,31 @@
   border-radius: 15px;
 }
 
+.u-post-infos {
+  flex: 1;
+}
+
+.u-p-title {
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.u-p-date {
+  color: gray;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.date-stat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+}
+
 .btn-all-wrapper {
   display: flex;
   justify-content: center;

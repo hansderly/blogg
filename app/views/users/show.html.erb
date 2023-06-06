@@ -30,7 +30,14 @@
         <div class="u-post">
           <div class="u-post-infos">
             <p class="u-p-title"> <%= post.title %> </p>
-            <p class="u-p-date"> <%= post.created_at.strftime("%d/%m/%Y") %> </p>
+            <p class="u-p-text"> <%= post.text %> </p>
+            <div class="date-stat">
+              <p class="u-p-date"> <%= post.created_at.strftime("%d/%m/%Y") %> </p>
+              <div class="stat">
+                <p> Likes:  <%= post.likes_counter %> | </p>
+                <p>  Comments: <%= post.comments_counter %> </p>
+              </div>
+            </div>
           </div>
           <div class="u-com-li">
           </div>
