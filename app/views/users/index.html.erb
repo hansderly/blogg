@@ -1,5 +1,6 @@
 <section class="wrapper">
   <section class="users-wrapper">
+    <%= link_to 'newpost', "posts/new" %>
     <h1>List of users</h1>
     <% @users.each do |user| %>
       <%= link_to "users/#{user.id}", remote: false do %>
