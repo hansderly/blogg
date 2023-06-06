@@ -26,14 +26,16 @@
   <section class="three-last-post">
     <h1>Three last posts</h1>
     <% @posts.each do |post| %>
-      <div class="u-post">
-        <div class="u-post-infos">
-          <p class="u-p-title"> <%= post.title %> </p>
-          <p class="u-p-date"> <%= post.created_at.strftime("%d/%m/%Y") %> </p>
+      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+        <div class="u-post">
+          <div class="u-post-infos">
+            <p class="u-p-title"> <%= post.title %> </p>
+            <p class="u-p-date"> <%= post.created_at.strftime("%d/%m/%Y") %> </p>
+          </div>
+          <div class="u-com-li">
+          </div>
         </div>
-        <div class="u-com-li">
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </section>
 
