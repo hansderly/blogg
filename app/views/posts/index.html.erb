@@ -1,1 +1,40 @@
-<p>you are seeing index for posts</p>
+<section class="wrapper">
+  <div class="users">
+    <div class="user-img">
+      <%= image_tag @user.photo %>
+    </div>
+    <div class="user-infos">
+      <p class="u-name"> <%= @user.name %> </p>
+      <div class="u-counter-wrapper">
+        Number of posts: <div class="tag">
+        <p class="u-counter"> <%= @user.posts_counter %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <% @posts.each do |post| %>
+    <div class="each-post">
+    <div class="post-wrapper">
+    <div class="post-head">
+      <h2> Post by <%= @user.name %> </h2>
+      <div class="com-like">
+        <span class="com">Comments: <%= post.comments.count %> | </span>
+        <span class="like">Likes: <%= post.likes.count %></span>
+      </div>
+    </div>
+    <p><%= post.text %></p>
+    </div>
+
+    <section class="comment-wrapper">
+      <% post.last_five_comments.each do |comment| %>
+        <div class="comment">
+          <p> <%= comment.author.name %> : <%= comment.text %></p>
+        </div>
+      <% end %>
+    </section>
+    </div>
+    <% end %>
+  </div>
+</section>

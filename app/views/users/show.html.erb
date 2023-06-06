@@ -47,6 +47,8 @@
   </section>
 
   <div class="btn-all-wrapper">
-    <button >See all post</button>
+    <button>
+      <%= link_to 'See all post', "/users/#{@user.id}/posts" %>
+    </button>
   </div>
 </section>

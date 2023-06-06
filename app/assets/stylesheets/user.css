@@ -82,6 +82,10 @@
   align-items: center;
 }
 
+.each-post {
+  margin-bottom: 15px;
+}
+
 .btn-all-wrapper {
   display: flex;
   justify-content: center;
