@@ -8,16 +8,25 @@
     </div>
   </div>
   <p><%= @post.text %></p>
+
+  <div class="like-post-wrapper">
+    <%= form_with(url: "/users/#{params[:user_id]}/posts/#{@post.id}/like_a_post", method: :post) do |form| %>
+      <div class="">
+        <%= form.submit 'Like'%>
+      </div>
+    <% end %>
+
+  </div>
   </div>
 
   <div class="add-comment">
-    <%= form_with url: "/users/#{params[:user_id]}/posts/#{@post.id}/comment_a_post", method: :post, :class => 'main-form', local: true, scope: :comment do |f| %>
+    <%= form_with url: "/users/#{params[:user_id]}/posts/#{@post.id}/comment_a_post", method: :post, local: true, scope: :comment do |f| %>
         <div class="input-container">
           <p>Add a comment:</p>
-          <%= f.text_area :text,  :maxlength => 250, :class => 'text-black' %>
+          <%= f.text_area :text,  :maxlength => 250 %>
         </div>
-        <%= f.submit "Send", :class => 'p-1 w-16 mb-8 text-zinc-200 bg-white bg-opacity-10 text-white rounded-2xl shadow-5xl border-2 border-t-0 border-l-0 border-white/25'%>
-      <% end %>
+        <%= f.submit "Add a comment"%>
+    <% end %>
   </div>
 
   <% if !@post.comments.empty? %>
