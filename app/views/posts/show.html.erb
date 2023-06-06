@@ -1,1 +1,20 @@
-<p>your are seeing show for post</p>
+<section class="wrapper">
+  <div class="post-wrapper">
+  <div class="post-head">
+    <h2> Post by <%= @user.name %> </h2>
+    <div class="com-like">
+      <span class="com">Comments: <%= @post.comments.count %> | </span>
+      <span class="like">Likes: <%= @post.likes.count %></span>
+    </div>
+  </div>
+  <p><%= @post.text %></p>
+  </div>
+
+  <section class="comment-wrapper">
+    <% @post.comments.each do |comment| %>
+      <div class="comment">
+        <p> <%= comment.author.name %> : <%= comment.text %></p>
+      </div>
+    <% end %>
+  </section>
+</section>

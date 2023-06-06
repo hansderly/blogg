@@ -1,1 +1,54 @@
-<p>you are seeing show in users</p>
+
+<section class="wrapper">
+  <section class="users-wrapper">
+    <h1>User</h1>
+    <div class="users">
+      <div class="user-img">
+        <%= image_tag @user.photo %>
+      </div>
+      <div class="user-infos">
+        <p class="u-name"> <%= @user.name %> </p>
+        <div class="u-counter-wrapper">
+          Number of posts: <div class="tag">
+          <p class="u-counter"> <%= @user.posts_counter %> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-bio">
+    <h1>Biography</h1>
+    <div class="u-bio-text-wrapper">
+      <p class="u-bio-text"> <%= @user.bio %> </p>
+    </div>
+  </section>
+
+  <section class="three-last-post">
+    <h1>Three last posts</h1>
+    <% @posts.each do |post| %>
+      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+        <div class="u-post">
+          <div class="u-post-infos">
+            <p class="u-p-title"> <%= post.title %> </p>
+            <p class="u-p-text"> <%= post.text %> </p>
+            <div class="date-stat">
+              <p class="u-p-date"> <%= post.created_at.strftime("%d/%m/%Y") %> </p>
+              <div class="stat">
+                <p> Likes:  <%= post.likes_counter %> | </p>
+                <p>  Comments: <%= post.comments_counter %> </p>
+              </div>
+            </div>
+          </div>
+          <div class="u-com-li">
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </section>
+
+  <div class="btn-all-wrapper">
+    <button>
+      <%= link_to 'See all post', "/users/#{@user.id}/posts" %>
+    </button>
+  </div>
+</section>

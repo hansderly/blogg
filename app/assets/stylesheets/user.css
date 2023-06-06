@@ -1,0 +1,99 @@
+.users-wrapper {
+  /* tes */
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 15px;
+  padding: 0 25px 0 0;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.user-img img {
+  width: 100px;
+  height: 100px;
+}
+
+.user-infos {
+  flex: 1;
+}
+
+.u-counter-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+  border-radius: 15px;
+  background-color: aliceblue;
+}
+
+.u-bio {
+  margin: 25px 0;
+}
+
+.u-bio h1 {
+  margin: 10px 0;
+}
+
+.u-bio-text-wrapper {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.u-post-infos {
+  flex: 1;
+}
+
+.u-p-title {
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.u-p-date {
+  color: gray;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.date-stat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+}
+
+.each-post {
+  margin-bottom: 15px;
+}
+
+.btn-all-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.btn-all-wrapper button {
+  padding: 10px 15px;
+  background-color: white;
+  border: 1px solid wheat;
+}
