@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def initial_number
     self.posts_counter = 0
   end
+
+  def all_posts
+    posts.includes(:comments, comments: :author)
+  end
 end
