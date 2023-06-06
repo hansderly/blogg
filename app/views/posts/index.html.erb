@@ -27,6 +27,7 @@
     <p><%= post.text %></p>
     </div>
 
+    <% if !post.last_five_comments.empty? %>
     <section class="comment-wrapper">
       <% post.last_five_comments.each do |comment| %>
         <div class="comment">
@@ -34,6 +35,7 @@
         </div>
       <% end %>
     </section>
+    <% end %>
     </div>
     <% end %>
   </div>
