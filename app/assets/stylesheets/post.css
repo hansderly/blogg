@@ -4,3 +4,26 @@
   border: 1px solid wheat;
   margin: 10px 0;
 }
+
+.post-wrapper {
+  background-color: white;
+  border: 1px solid wheat;
+  padding: 25px;
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-wrapper {
+  background-color: white;
+  border: 1px solid wheat;
+  padding: 25px;
+  margin-top: 25px;
+}
+
+.comment {
+  margin: 15px 0;
+  border-bottom: 1px solid wheat;
+}
