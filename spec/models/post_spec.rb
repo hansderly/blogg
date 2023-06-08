@@ -26,7 +26,6 @@ class PostTest < ActiveSupport::TestCase
       end
     end
 
-
     it 'last_five_comments should return five comments' do
       6.times { Comment.create(text: 'c1', post:, author: author_two) }
       expect(post.last_five_comments.length).to equal(5)
