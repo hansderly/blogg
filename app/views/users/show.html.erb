@@ -4,7 +4,10 @@
     <h1>User</h1>
     <div class="users">
       <div class="user-img">
+
+          <% if @user&.photo%>
         <%= image_tag @user.photo %>
+        <% end %>
       </div>
       <div class="user-infos">
         <p class="u-name"> <%= @user.name %> </p>

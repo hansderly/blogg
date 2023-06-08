@@ -6,7 +6,9 @@
       <%= link_to "users/#{user.id}", remote: false do %>
       <div class="users">
         <div class="user-img">
-          <%= image_tag user.photo %>
+          <% if user&.photo%>
+            <%= image_tag user.photo %>
+          <% end %>
         </div>
         <div class="user-infos">
           <p class="u-name"> <%= user.name %> </p>
