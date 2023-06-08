@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   post "/users/:user_id/posts/:id/comment_a_post", to: "comments#comment_a_post", as: :comment_a_post
 
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:index, :show, :destroy] do
+      resources :comments, only: [:destroy]
+    end
   end
 
   root 'users#index'
