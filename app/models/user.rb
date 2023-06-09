@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: :author_id, dependent: :destroy
   has_many :likes, foreign_key: :author_id, dependent: :destroy
   before_validation :initial_number, on: :create
+  before_create :set_user_token
 
   validates :name, presence: true
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
@@ -17,6 +18,10 @@ class User < ApplicationRecord
 
   def initial_number
     self.posts_counter = 0
+  end
+
+  def set_user_token
+    self.user_token = SecureRandom.hex(20)
   end
 
   def all_posts
