@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post "/posts/create", to: "posts#create", as: :posts
   post "/users/:user_id/posts/:id/like_a_post", to: "likes#like_a_post", as: :like_a_post
   post "/users/:user_id/posts/:id/comment_a_post", to: "comments#comment_a_post", as: :comment_a_post
+  delete "/users/:user_id/posts/:id", to: "posts#destroy", as: :delete_post
 
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :destroy] do
