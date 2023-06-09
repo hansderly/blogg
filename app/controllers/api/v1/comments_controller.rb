@@ -8,7 +8,7 @@ class Api::V1::CommentsController < Api::V1::BaseController
   end
 
   def create
-    @new_comment = Comment.new(params.require(:comment).permit(:post_id, :text)))
+    @new_comment = Comment.new(params.require(:comment).permit(:post_id, :text))
     @new_comment.post_id = params[:post_id]
     @new_comment.author = @authorized_user
 
