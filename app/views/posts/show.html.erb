@@ -19,6 +19,7 @@
   </div>
   </div>
 
+
   <div class="add-comment-wrapper">
     <%= form_with url: "/users/#{params[:user_id]}/posts/#{@post.id}/comment_a_post", method: :post, local: true, scope: :comment do |f| %>
         <div class="c-input-wrapper">
@@ -34,6 +35,11 @@
     <% @post.comments.each do |comment| %>
       <div class="comment">
         <p> <%= comment.author.name %> : <%= comment.text %></p>
+        <p>
+          <% if can? :destroy, comment %>
+            <p class='text-end'><%= button_to 'Delete', user_post_comment_path(@user, @post, comment), method: :delete %></p>
+          <% end %>
+        </p>
       </div>
     <% end %>
   </section>

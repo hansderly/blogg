@@ -26,9 +26,17 @@
         <span class="com">Comments: <%= post.comments.count %> | </span>
         <span class="like">Likes: <%= post.likes.count %></span>
       </div>
+
     </div>
     <p><%= post.text %></p>
+
+
+      <% if can? :destroy, post %>
+      <p class='text-end'><%= button_to 'Delete', user_post_path(@user, post), method: :delete %></p>
+      <% end %>
     </div>
+
+
 
     <% if !post.last_five_comments.empty? %>
     <section class="comment-wrapper">
