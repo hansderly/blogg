@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     user = @post.author
 
     @post.destroy
-    redirect_to user
+    redirect_to user_posts_path(user)
   end
 
   def post_params
