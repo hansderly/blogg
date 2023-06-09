@@ -29,6 +29,14 @@ class PostsController < ApplicationController
     end
   end
 
+    def destroy
+    @post = Post.find(params[:id])
+    user = @post.author
+
+    @post.destroy
+    redirect_to user
+  end
+
   def post_params
     params.require(:post).permit(:title, :text, :user_id)
   end
