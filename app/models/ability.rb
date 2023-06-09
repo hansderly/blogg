@@ -19,6 +19,5 @@ class Ability
     can :manage, :all
     can :destroy, Post
     can :destroy, Comment
-
   end
 end
