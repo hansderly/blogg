@@ -1,5 +1,4 @@
 class Api::V1::CommentsController < Api::V1::BaseController
-
   def index
     post = Post.find(params[:post_id])
     @comments = Comment.where(post:)
@@ -18,5 +17,4 @@ class Api::V1::CommentsController < Api::V1::BaseController
       render json: @new_comment.errors, status: :unprocessable_entity
     end
   end
-
 end
