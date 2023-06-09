@@ -13,7 +13,7 @@ class Api::V1::CommentsController < Api::V1::BaseController
     @new_comment.author = @authorized_user
 
     if @new_comment.save
-      render json: @new_comment, status: :created,
+      render json: @new_comment, status: :created
     else
       render json: @new_comment.errors, status: :unprocessable_entity
     end
